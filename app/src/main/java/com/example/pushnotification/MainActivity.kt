@@ -13,7 +13,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("Roshan", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+            else{
+                val token = task.result
 
+                // Log and toast
 
+                Log.d("roshan", token)
+//                Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
+            }
+
+            // Get new FCM registration token
+
+        })
     }
 }
