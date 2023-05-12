@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+android:layout_marginHorizontal="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:src="@drawable/frame"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:paddingStart="20dp"
+    android:gravity="start|center"
+    android:layout_toRightOf="@id/notification_icon"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/notification_message1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your notification message"/>
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your notification Description"/>
+</LinearLayout>
+</RelativeLayout>
